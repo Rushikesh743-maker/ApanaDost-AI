@@ -1,0 +1,430 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --bg-gradient-start: 230 50% 8%;
+    --bg-gradient-mid: 222 47% 11%;
+    --bg-gradient-end: 224 40% 16%;
+    --glow-color: 330 80% 65%;
+
+    --background: 222 47% 8%;
+    --foreground: 220 20% 92%;
+
+    --card: 224 35% 13%;
+    --card-foreground: 220 20% 92%;
+
+    --popover: 224 35% 13%;
+    --popover-foreground: 220 20% 92%;
+
+    --primary: 270 60% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 25% 18%;
+    --secondary-foreground: 220 20% 85%;
+
+    --muted: 224 20% 16%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 330 70% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 15% 20%;
+    --input: 224 15% 20%;
+    --ring: 270 60% 65%;
+
+    --radius: 1.25rem;
+
+    --glass-bg: 224 25% 14%;
+    --glass-border: 224 15% 25%;
+
+    --user-bubble: 217 90% 60%;
+    --user-bubble-foreground: 0 0% 100%;
+    --bot-bubble: 224 30% 16%;
+    --bot-bubble-foreground: 220 15% 90%;
+
+    --emotion-happy: 45 90% 60%;
+    --emotion-sad: 210 60% 55%;
+    --emotion-anxious: 35 80% 55%;
+    --emotion-angry: 0 70% 55%;
+    --emotion-lonely: 260 40% 55%;
+    --emotion-stressed: 15 70% 55%;
+    --emotion-confused: 180 50% 55%;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 220 20% 92%;
+    --sidebar-primary: 270 60% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 25% 18%;
+    --sidebar-accent-foreground: 220 20% 92%;
+    --sidebar-border: 224 15% 20%;
+    --sidebar-ring: 270 60% 65%;
+  }
+
+  .light {
+    --background: 260 30% 98%;
+    --foreground: 230 25% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 18%;
+
+    --primary: 270 60% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 20% 94%;
+    --secondary-foreground: 230 20% 30%;
+
+    --muted: 260 15% 93%;
+    --muted-foreground: 230 10% 42%;
+
+    --accent: 330 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 260 12% 88%;
+    --input: 260 12% 88%;
+    --ring: 270 60% 55%;
+
+    --glass-bg: 0 0% 100%;
+    --glass-border: 260 12% 85%;
+
+    --user-bubble: 217 85% 60%;
+    --user-bubble-foreground: 0 0% 100%;
+    --bot-bubble: 260 40% 94%;
+    --bot-bubble-foreground: 230 20% 20%;
+  }
+
+  /* ===== Personality themes - Dark ===== */
+
+  .personality-mentor {
+    --bg-gradient-start: 230 50% 8%;
+    --bg-gradient-mid: 230 45% 12%;
+    --bg-gradient-end: 225 50% 10%;
+    --glow-color: 260 50% 70%;
+    --primary: 250 50% 65%;
+    --accent: 260 40% 70%;
+    --glass-bg: 230 30% 14%;
+    --glass-border: 230 20% 25%;
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 250 50% 65%;
+    --secondary: 230 25% 18%;
+    --muted: 230 20% 16%;
+    --card: 230 30% 12%;
+    --background: 230 50% 7%;
+    --bot-bubble: 230 30% 16%;
+    --user-bubble: 250 60% 55%;
+  }
+
+  .personality-bestfriend {
+    --bg-gradient-start: 270 60% 8%;
+    --bg-gradient-mid: 270 50% 15%;
+    --bg-gradient-end: 330 50% 14%;
+    --glow-color: 330 80% 65%;
+    --primary: 270 60% 65%;
+    --accent: 330 70% 65%;
+    --glass-bg: 270 20% 14%;
+    --glass-border: 270 15% 25%;
+    --border: 270 15% 20%;
+    --input: 270 15% 20%;
+    --ring: 270 60% 65%;
+    --secondary: 270 20% 18%;
+    --muted: 270 15% 16%;
+    --card: 270 25% 12%;
+    --background: 270 30% 6%;
+    --bot-bubble: 270 25% 16%;
+    --user-bubble: 270 60% 55%;
+  }
+
+  .personality-sibling {
+    --bg-gradient-start: 222 60% 8%;
+    --bg-gradient-mid: 222 55% 14%;
+    --bg-gradient-end: 213 65% 18%;
+    --glow-color: 190 80% 55%;
+    --primary: 220 70% 55%;
+    --accent: 190 70% 55%;
+    --glass-bg: 222 30% 14%;
+    --glass-border: 222 20% 25%;
+    --border: 222 20% 20%;
+    --input: 222 20% 20%;
+    --ring: 220 70% 55%;
+    --secondary: 222 25% 18%;
+    --muted: 222 20% 16%;
+    --card: 222 30% 12%;
+    --background: 222 50% 7%;
+    --bot-bubble: 222 30% 16%;
+    --user-bubble: 220 70% 50%;
+  }
+
+  .personality-calm {
+    --bg-gradient-start: 200 35% 8%;
+    --bg-gradient-mid: 172 35% 13%;
+    --bg-gradient-end: 168 45% 16%;
+    --glow-color: 165 70% 55%;
+    --primary: 170 50% 50%;
+    --accent: 165 60% 55%;
+    --glass-bg: 180 25% 13%;
+    --glass-border: 180 15% 23%;
+    --border: 180 15% 18%;
+    --input: 180 15% 18%;
+    --ring: 170 50% 50%;
+    --secondary: 180 20% 16%;
+    --muted: 180 15% 14%;
+    --card: 180 25% 11%;
+    --background: 190 35% 6%;
+    --bot-bubble: 180 25% 15%;
+    --user-bubble: 170 55% 45%;
+  }
+
+  /* ===== Personality themes - Light ===== */
+
+  .light.personality-mentor {
+    --background: 235 40% 97%;
+    --card: 0 0% 100%;
+    --primary: 250 50% 50%;
+    --accent: 260 40% 60%;
+    --glass-bg: 235 30% 98%;
+    --glass-border: 235 15% 88%;
+    --border: 235 15% 88%;
+    --secondary: 235 20% 94%;
+    --muted: 235 15% 93%;
+    --muted-foreground: 235 15% 42%;
+    --bg-gradient-start: 260 25% 98%;
+    --bg-gradient-mid: 240 25% 96%;
+    --bg-gradient-end: 220 30% 97%;
+    --glow-color: 260 40% 75%;
+    --bot-bubble: 240 30% 93%;
+    --user-bubble: 250 55% 55%;
+  }
+
+  .light.personality-bestfriend {
+    --background: 270 25% 97%;
+    --card: 0 0% 100%;
+    --primary: 270 55% 50%;
+    --accent: 330 60% 55%;
+    --glass-bg: 270 20% 98%;
+    --glass-border: 270 12% 88%;
+    --border: 270 12% 88%;
+    --secondary: 270 18% 94%;
+    --muted: 270 12% 93%;
+    --muted-foreground: 270 10% 42%;
+    --bg-gradient-start: 280 25% 98%;
+    --bg-gradient-mid: 300 20% 96%;
+    --bg-gradient-end: 330 20% 97%;
+    --glow-color: 330 60% 80%;
+    --bot-bubble: 275 35% 93%;
+    --user-bubble: 270 55% 55%;
+  }
+
+  .light.personality-sibling {
+    --background: 215 35% 97%;
+    --card: 0 0% 100%;
+    --primary: 220 65% 50%;
+    --accent: 190 60% 45%;
+    --glass-bg: 215 25% 98%;
+    --glass-border: 215 15% 88%;
+    --border: 215 15% 88%;
+    --secondary: 215 22% 94%;
+    --muted: 215 15% 93%;
+    --muted-foreground: 215 15% 42%;
+    --bg-gradient-start: 215 30% 98%;
+    --bg-gradient-mid: 210 25% 96%;
+    --bg-gradient-end: 200 25% 97%;
+    --glow-color: 190 60% 70%;
+    --bot-bubble: 215 30% 93%;
+    --user-bubble: 220 65% 55%;
+  }
+
+  .light.personality-calm {
+    --background: 170 30% 97%;
+    --card: 0 0% 100%;
+    --primary: 170 45% 40%;
+    --accent: 165 50% 45%;
+    --glass-bg: 170 20% 98%;
+    --glass-border: 170 12% 88%;
+    --border: 170 12% 88%;
+    --secondary: 170 18% 94%;
+    --muted: 170 12% 93%;
+    --muted-foreground: 170 10% 42%;
+    --bg-gradient-start: 170 22% 98%;
+    --bg-gradient-mid: 165 22% 96%;
+    --bg-gradient-end: 160 18% 97%;
+    --glow-color: 165 50% 70%;
+    --bot-bubble: 170 30% 93%;
+    --user-bubble: 170 50% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Background gradient */
+.bg-app-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--bg-gradient-start)) 0%,
+    hsl(var(--bg-gradient-mid)) 50%,
+    hsl(var(--bg-gradient-end)) 100%
+  );
+  transition: background 500ms ease;
+}
+
+/* Glassmorphism */
+.glass {
+  background: hsl(var(--glass-bg) / 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid hsl(var(--glass-border) / 0.3);
+  transition: background 400ms ease, border-color 400ms ease;
+}
+
+.glass-strong {
+  background: hsl(var(--glass-bg) / 0.8);
+  backdrop-filter: blur(30px);
+  border: 1px solid hsl(var(--glass-border) / 0.4);
+  transition: background 400ms ease, border-color 400ms ease;
+}
+
+/* Light mode glass adjustments */
+.light .glass {
+  background: hsl(var(--glass-bg) / 0.7);
+  box-shadow: 0 2px 12px hsl(var(--glow-color) / 0.06);
+}
+
+.light .glass-strong {
+  background: hsl(var(--glass-bg) / 0.85);
+  box-shadow: 0 2px 12px hsl(var(--glow-color) / 0.08);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 20px hsl(var(--glow-color) / 0.3),
+              0 0 60px hsl(var(--glow-color) / 0.1);
+  transition: box-shadow 400ms ease;
+}
+
+.light .glow-primary {
+  box-shadow: 0 0 12px hsl(var(--glow-color) / 0.15),
+              0 0 30px hsl(var(--glow-color) / 0.06);
+}
+
+.glow-send {
+  box-shadow: 0 0 15px hsl(var(--glow-color) / 0.4),
+              0 0 40px hsl(var(--glow-color) / 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-send:hover {
+  box-shadow: 0 0 25px hsl(var(--glow-color) / 0.6),
+              0 0 60px hsl(var(--glow-color) / 0.25);
+}
+
+.light .glow-send {
+  box-shadow: 0 0 10px hsl(var(--glow-color) / 0.2);
+}
+
+.light .glow-send:hover {
+  box-shadow: 0 0 15px hsl(var(--glow-color) / 0.3);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes typing-dot {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+@keyframes listening-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes icon-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
+.animate-slide-up { animation: slide-up 0.4s ease-out forwards; }
+.animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
+.animate-icon-pop { animation: icon-pop 0.3s ease-out forwards; }
+
+.typing-dot-1 { animation: typing-dot 1.4s ease-in-out infinite; }
+.typing-dot-2 { animation: typing-dot 1.4s ease-in-out infinite 0.2s; }
+.typing-dot-3 { animation: typing-dot 1.4s ease-in-out infinite 0.4s; }
+
+.listening-ring {
+  animation: listening-pulse 1.5s ease-in-out infinite;
+}
+
+/* Material icon in avatar */
+.icon-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(var(--primary));
+  transition: color 400ms ease;
+}
+
+/* Theme transition */
+body, .bg-app-gradient {
+  transition: background-color 500ms ease, color 400ms ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--glass-border) / 0.5);
+  border-radius: 3px;
+}
