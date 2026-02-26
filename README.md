@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+🌟 ApnaDost – Your Emotional AI Friend
 
-## Project info
+ApnaDost is a modern, interactive AI companion that listens, supports, and gives emotional comfort in a friendly, human-like chat interface.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This upgraded version includes dynamic personalities, light/dark mode, emoji-enhanced messages, separate chat histories, 2-second message delays, and a polished modern UI/UX.
 
-## How can I edit this code?
+🎯 Features
+1️⃣ Dynamic Friend Personalities
 
-There are several ways of editing your application.
+Choose from 4 unique AI personalities:
 
-**Use Lovable**
+Personality	Style
+🧠 Mature Mentor	Wise, reflective, structured, calm
+🤝 Best Friend	Casual, relatable, warm, fun
+💪 Big Brother / Sister	Protective, motivating, confident
+🧘 Calm Listener	Gentle, soothing, peaceful
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Each personality has its own independent chat history, so switching feels like talking to a different friend.
 
-Changes made via Lovable will be committed automatically to this repo.
+2️⃣ Human-Like Messaging
 
-**Use your preferred IDE**
+WhatsApp-style short chat messages
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2-second delay between each message bubble
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Typing indicator with animated three dots
 
-Follow these steps:
+Emojis included naturally per message for more warmth and expressiveness
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3️⃣ Light & Dark Mode
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Soft, uplifting Light Mode
 
-# Step 3: Install the necessary dependencies.
-npm i
+Premium, calm Dark Mode
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Smooth Light/Dark toggle with animated sun/moon icon
 
-**Edit a file directly in GitHub**
+Personalized accent colors based on selected personality
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+4️⃣ Polished Modern UI
 
-**Use GitHub Codespaces**
+Rounded chat bubbles and cards (glassmorphism style)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Smooth slide + fade animations for messages
 
-## What technologies are used for this project?
+Hover effects for buttons and interactive elements
 
-This project is built with:
+Soft shadows and subtle gradients for a premium feel
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Responsive layout for mobile, tablet, and desktop
 
-## How can I deploy this project?
+5️⃣ Other Enhancements
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Smooth transitions when switching personalities
 
-## Can I connect a custom domain to my Lovable project?
+Auto-scroll to newest message
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+No clutter, airy and readable interface
