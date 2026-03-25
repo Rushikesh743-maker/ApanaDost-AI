@@ -54,8 +54,8 @@ serve(async (req) => {
 
   try {
     const { messages, personality, emotion } = await req.json();
-    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
-    if (!LOVABLE_API_KEY) throw new Error('LOVABLE_API_KEY is not configured');
+   const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
+if (!OPENAI_API_KEY) throw new Error('OPENAI_API_KEY is not configured');
 
     const systemPrompt = `You are ApnaDost — an emotionally intelligent AI companion. You are NOT a therapist. You respond like a real person texting.
 
@@ -87,14 +87,14 @@ IMPORTANT: If the user expresses self-harm or suicidal thoughts, respond with de
 
 STRICT: Maintain this personality consistently. Do NOT mix tones from other personalities. ALWAYS use ||| between messages.`;
 
-    const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-3-flash-preview',
+        model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: systemPrompt },
           ...messages,
